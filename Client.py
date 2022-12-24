@@ -1,12 +1,12 @@
 from zeep import Client
 
 def printMenu():
-    print("======================")
+    print("\n======================")
     print("1.Withdrawal")
     print("2.Deposit")
     print("3.Show Balance")
     print("4.Exit")
-    print("======================")
+    print("======================\n")
 
 def getInput():
     service = 0
@@ -21,7 +21,7 @@ if __name__=='__main__':
     bank_client = Client('http://127.0.0.1:8000/?wsdl')
     id = -1
     while id == -1:
-        username = input("Enter Username: ")
+        username = input("\nEnter Username: ")
         password = input("Enter Password: ")
         id = bank_client.service.login(username, password)
 
