@@ -25,7 +25,7 @@ class serviceGUI:
             Label(top,text="Enter Amount: ").pack()
             amountEntry = Entry(top)
             amountEntry.pack()
-            okBtn = Button(top, text="OK",padx=20, command=withdrawal)
+            okBtn = Button(top, text="OK",padx=20, command=withdrawal, bg="green", fg="white")
             okBtn.pack()
         
         def depositOnClick():
@@ -42,7 +42,7 @@ class serviceGUI:
             Label(top,text="Enter Amount: ").pack()
             amountEntry = Entry(top)
             amountEntry.pack()
-            okBtn = Button(top, text="OK",padx=20, command=deposit)
+            okBtn = Button(top, text="OK",padx=20, command=deposit, bg="green", fg="white")
             okBtn.pack()
 
         def showBalance():
@@ -70,16 +70,16 @@ class serviceGUI:
         bottom_frame2.grid(row=2,column=1)
 
 
-        withdrawalBtn = Button(window,text="Withdrawal", padx=45, pady=20, command= withdrawalOnClick)
+        withdrawalBtn = Button(window,text="Withdrawal", padx=45, pady=20, command= withdrawalOnClick, bg="green", fg="white")
         withdrawalBtn.grid(row = 1, column = 0)
 
-        depositBtn = Button(window,text="Deposit", padx=50, pady=20, command= depositOnClick)
+        depositBtn = Button(window,text="Deposit", padx=50, pady=20, command= depositOnClick, bg="green", fg="white")
         depositBtn.grid(row = 1, column = 1)
 
-        showBalanceBtn = Button(window,text="Show Balance", padx=40, pady=20, command= showBalance)
+        showBalanceBtn = Button(window,text="Show Balance", padx=40, pady=20, command= showBalance, bg="green", fg="white")
         showBalanceBtn.grid(row = 2, column = 0)
 
-        exitBtn = Button(window, text="Exit", padx=60, pady=20, command=exit)
+        exitBtn = Button(window, text="Exit", padx=60, pady=20, command=exit, bg="red", fg="white")
         exitBtn.grid(row=2, column=1)
 
         window.mainloop()

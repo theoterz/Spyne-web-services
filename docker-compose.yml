@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  postgres:
+    build: ./postgresContainer/
+    ports:
+      - 5000:5432
+    restart: always
+  server:
+    depends_on:
+      - postgres
+    build: ./Server/
+    ports:
+      - 9000:8000
+    command: python3 ./BankWebServices.py
+
+    
+

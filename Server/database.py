@@ -3,7 +3,7 @@ import psycopg2
 
 class Database:
 
-    con = psycopg2.connect(dbname = "bank", user = "postgres", password = "postgres", host = "localhost")
+    con = psycopg2.connect(dbname = "bank", user = "postgres", password = "postgres", host = "postgres")
     statement = con.cursor()
     
     def authenticateUser(self, username, password):

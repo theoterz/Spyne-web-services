@@ -32,7 +32,7 @@ class loginGUI:
         passwordEntry = Entry(show="*")
         passwordEntry.grid(row = 2, column = 1)
 
-        loginBtn = Button(loginWindow, text = "Login", command= login)
+        loginBtn = Button(loginWindow, text = "Login", command= login, bg="green", fg="white")
         loginBtn.grid(row = 3, column = 1)
 
         loginWindow.mainloop()
